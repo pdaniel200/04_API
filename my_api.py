@@ -1,7 +1,7 @@
 # pachetul flask creaza api
 from flask import Flask
 
-server_port = 5000 # porturile cu 5000 sunt specifice serverului de comunicare prin api :D
+server_port = 5000  # porturile cu 5000 sunt specifice serverului de comunicare prin api :D
 app = Flask(__name__)
 app.config['DEBUGG'] = True
 
@@ -23,9 +23,11 @@ users = [
 def get_user():
     return users[0]
 
+
 @app.route('/allusers')
 def get_users():
     return users
+
 
 # @app.route('/allusers', methods=['POST'])
 # def post_users():
@@ -34,4 +36,3 @@ def get_users():
 
 if __name__ == '__main__':
     app.run('localhost', port=server_port)
-
